@@ -2,9 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\Transaction;
 use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 class TransactionsImport implements ToArray, WithHeadingRow
