@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 class TransactionsController extends Controller
 {
-    public function getTransactions(TransactionsReader $reader){
 
+    public function getTransactions(TransactionsReader $reader)
+    {
+        return response()->json($reader->retrieveTransactions());
     }
+
 }
