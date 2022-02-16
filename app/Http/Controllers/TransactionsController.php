@@ -11,7 +11,11 @@ class TransactionsController extends Controller
 
     public function getTransactions(TransactionsReader $reader)
     {
-        return response()->json($reader->retrieveTransactions());
+        try {
+            return response()->json($reader->retrieveTransactions());
+        } catch (\Exception $e) {
+            abort(403, 'Data source not recognised');
+        }
     }
 
 }
